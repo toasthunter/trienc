@@ -39,7 +39,7 @@ pub fn draw_img(trinums: Vec<[u8; 3]>) -> Result<(), Box<dyn std::error::Error>>
         }
     }
 
-    dt.write_png("lol.png")?;
+    dt.write_png("output.png")?;
 
     Ok(())
 
