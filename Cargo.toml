@@ -1,0 +1,8 @@
+[package]
+name = "trienc"
+version = "0.1.0"
+authors = ["toasthunter"]
+edition = "2018"
+
+[dependencies]
+raqote = "0.8.0"
