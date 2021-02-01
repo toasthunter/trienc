@@ -1,8 +1,13 @@
 const START_OFFSET: u8 = b'a';
+const ILLEGAL_LETTERS: &str = "'.,:;-_?!0123456789";
 
 pub fn text_to_trinary(input: String) -> Vec<[u8; 3]> {
 
-    let lc = input.to_lowercase();
+    let lc = input.to_lowercase()
+        .chars()
+        .filter(|x| !ILLEGAL_LETTERS.contains(*x))
+        .map(|x| if x == '\n' {' '} else {x})
+        .collect::<String>();
 
     lc.as_bytes()
         .into_iter()

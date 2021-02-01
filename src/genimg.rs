@@ -1,5 +1,5 @@
-static PIXEL_WIDTH: i32 = 50;
-static LINE_LIMIT: i32 = 50;
+const PIXEL_WIDTH: i32 = 50;
+const LINE_LIMIT: i32 = 50;
 
 extern crate raqote;
 use raqote::*;
