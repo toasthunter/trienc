@@ -29,7 +29,7 @@ pub fn draw_img(trinums: Vec<[u8; 3]>) -> Result<(), Box<dyn std::error::Error>>
 
         }
 
-        if curr_characters_in_line == LINE_LIMIT {
+        if curr_characters_in_line == LINE_LIMIT - 1 {
             line_offset += 3 * PIXEL_WIDTH;
             x_offset = 0;
             curr_characters_in_line = 0;
@@ -37,6 +37,7 @@ pub fn draw_img(trinums: Vec<[u8; 3]>) -> Result<(), Box<dyn std::error::Error>>
             curr_characters_in_line += 1;
             x_offset += 1;
         }
+        
     }
 
     dt.write_png("output.png")?;
